@@ -869,4 +869,6 @@ class DropdownSearchState<T> extends State<DropdownSearch<T>> {
       _popupStateKey.currentState?.getSelectedItem ?? [];
 
   void updatePopupState() => _popupStateKey.currentState?.setState(() {});
+
+  void updateItems(List<T> items) => _popupStateKey.currentState?.updateItems(items);
 }

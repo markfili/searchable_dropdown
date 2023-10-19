@@ -79,6 +79,14 @@ class SelectionWidgetState<T> extends State<SelectionWidget<T>> {
     super.didUpdateWidget(oldWidget);
   }
 
+  void updateItems(List<T> items) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _cachedItems.clear();
+      _cachedItems.addAll(items);
+      _manageItemsByFilter(searchBoxController.text);
+    });
+  }
+
   @override
   void dispose() {
     _itemsStream.close();

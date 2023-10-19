@@ -1,3 +1,7 @@
+## [5.1.0] - 2023.10.19
+* Add method to update dropdown list items
+
+## [5.0.7?] - 2023.xx.xx
 * Added the following properties to the class `DropDownDecoratorProps`:
   
   - `searchSplashColor`
